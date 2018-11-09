@@ -1,0 +1,19 @@
+.table_wrapper {
+  text-align: center;
+  height: 100px;
+  width: 200px;
+  border-width: 3px;
+  border-color: black;
+  border-style: solid;
+}
+
+.time_slot {
+  margin-top: 35px;
+  color: blue;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.table_size {
+  color: red;
+}

@@ -9,3 +9,6 @@ test:
 
 storybook:
 	docker-compose run -p 9009:9009 --rm web npm run storybook
+
+build:
+	docker-compose build
