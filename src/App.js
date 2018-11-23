@@ -1,6 +1,15 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import './Components/Venue';
+import './Components/Table';
+import User from './Components/User';
+import GetUser from './UseCases/GetUser';
+import PutUser from './UseCases/PutUser';
+import CreateUser from './UseCases/CreateUser';
+
+const getUserGateway = new GetUser();
+const putUser = new PutUser();
 
 class App extends Component {
   render() {
@@ -10,9 +19,8 @@ class App extends Component {
           <img src={logo} className="App-logo" alt="logo" />
           <h1 className="App-title">Welcome to React</h1>
         </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
+            <User getUser = {getUserGateway}></User>
+            <CreateUser onSubmit={putUser.putUser}></CreateUser>
       </div>
     );
   }
